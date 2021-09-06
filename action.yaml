@@ -24,12 +24,9 @@ runs:
     JENKINS_USER: ${{ inputs.JENKINS_USER }}
     JENKINS_TOKEN: ${{ inputs.JENKINS_TOKEN }}
   args:
-    - -h
-    - ${{ inputs.JENKINS_HOST }}
-    - -j
-    - ${{ inputs.JENKINS_JOB }}
-    - -p
-    - ${{ inputs.JENKINS_PARAMS }}
+    - --host=${{ inputs.JENKINS_HOST }}
+    - --jobname=${{ inputs.JENKINS_JOB }}
+    - --jobparam=${{ inputs.JENKINS_PARAMS }}
 
 branding:
   icon: 'sun'
